@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+    --foreground: #333;
+
+    --card: #ffffff;
+    --card-foreground: #333;
+
+    --popover: #ffffff;
+    --popover-foreground: #333;
+
+    --primary: linear-gradient(90deg, #6ee7b7 0%, #3b82f6 100%);
+    --primary-foreground: #ffffff;
+
+    --secondary: linear-gradient(90deg, #fbbf24 0%, #f43f5e 100%);
+    --secondary-foreground: #ffffff;
+
+    --muted: #f1f5f9;
+    --muted-foreground: #374151;
+
+    --accent: #f1f5f9;
+    --accent-foreground: #374151;
+
+    --destructive: #f87171;
+    --destructive-foreground: #ffffff;
+
+    --border: #e5e7eb;
+    --input: #e5e7eb;
+    --ring: #3b82f6;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+
+  button, textarea {
+    transition: all 0.3s ease;
+  }
+
+  button:hover, textarea:focus {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+  }
+
+  .input-area:focus-within {
+    border-color: var(--ring);
+  }
+}
+
+.message-bubble {
+  padding: 10px 15px;
+  border-radius: 12px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.user-bubble {
+  background-color: #ffc642; 
+  color: #000000; 
+  align-self: flex-end;
+}
+
+.assistant-bubble {
+  background-color: #484848; 
+  color: #ffffff;
+}
